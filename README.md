@@ -4,9 +4,9 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-### ╔══════════════════════════════════════════════════════════╗
-###   WA CORPORATION - NATIVE SYSTEM INTERFACE
-### ╚══════════════════════════════════════════════════════════╝
+### ╔═════════════════════════════════════════════════════
+    WA CORPORATION - NATIVE SYSTEM INTERFACE
+╚═════════════════════════════════════════════════════
 
 **WA Corporation System Control Panel** is a powerful, retro-styled Windows terminal utility designed for advanced system management, diagnostics, and low-level control.
 
@@ -24,28 +24,3 @@ This tool contains features (in the "Danger Zone") that can cause system instabi
   - Windows Defender hybrid disablement.
   - Event log flushing.
 - **Multi-language**: EN, UA, RU, DE support.
-
-## 🛠 Installation & Build
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/WAC-System-Panel.git
-   ```
-2. Install dependencies:
-   ```bash
-   pip install colorama
-   ```
-3. Run:
-   ```bash
-   python main.py
-   ```
-
-## 📦 Building EXE
-To create a standalone executable:
-```bash
-pyinstaller --onefile --uac-admin --console --name "WAC_Panel" main.py
-```
-
-## 🌌 Visuals
-- Full Retro DOOM 2 / 90s Hacker aesthetic.
-- Glitch animations & typewriter effects.
-- Box-drawing character interfaces.
