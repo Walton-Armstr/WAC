@@ -1,5 +1,8 @@
 import sys
 import os
+from utils.console import configure_stdio_encoding
+
+configure_stdio_encoding()
 
 try:
     from colorama import init, Fore, Back, Style

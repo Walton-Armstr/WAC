@@ -42,7 +42,7 @@ This tool contains features (in the "Danger Zone") that can cause system instabi
 ## 📦 Building EXE
 To create a standalone executable:
 ```bash
-pyinstaller --onefile --uac-admin --name "WAC_Panel" main.py
+pyinstaller --onefile --uac-admin --console --name "WAC_Panel" main.py
 ```
 
 ## 🌌 Visuals

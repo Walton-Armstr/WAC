@@ -16,14 +16,20 @@ def run_as_admin(lang_code):
     """
     if not is_admin():
         print(f"\n{tr.get('admin_req')}")
-        # Command line args for the new process
-        # argv[0] is the script path, argv[1] is lang, argv[2] is flag
-        script = os.path.abspath(sys.argv[0])
-        params = f'"{script}" {lang_code} elevated'
+        # Command line args for the new process:
+        # script run: python.exe "main.py" EN elevated
+        # frozen run: WAC_System_Control.exe EN elevated
+        if getattr(sys, "frozen", False):
+            executable = sys.executable
+            params = f'{lang_code} elevated'
+        else:
+            executable = sys.executable
+            script = os.path.abspath(sys.argv[0])
+            params = f'"{script}" {lang_code} elevated'
         
         try:
             # ShellExecute with 'runas' verb triggers UAC
-            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, params, None, 1)
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", executable, params, None, 1)
         except Exception as e:
             print(f"Elevation Error: {e}")
         

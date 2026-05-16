@@ -3,10 +3,13 @@ import os
 from admin_check import is_admin, run_as_admin
 from disclaimer import show_disclaimer
 from menu import main_menu
+from utils.console import ensure_console
 from utils.translator import tr
 from utils.colors import Colors
 
 def main():
+    ensure_console()
+
     # 1. Setup Console Title
     if os.name == 'nt':
         os.system("title WA Corporation System Control Panel")

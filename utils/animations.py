@@ -3,6 +3,7 @@ import time
 import random
 import os
 from utils.colors import Colors
+from utils.console import ensure_console
 
 def typewriter(text, speed=0.02, color=Colors.WHITE):
     for char in text:
@@ -49,4 +50,5 @@ def draw_footer():
     print(Colors.RED + "╚" + "═" * (width - 2) + "╝")
 
 def styled_input(prompt):
+    ensure_console()
     return input(f"{Colors.RED}[{Colors.WHITE}>{Colors.RED}]{Colors.WHITE} {prompt}").strip()

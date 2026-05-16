@@ -24,7 +24,7 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --uac-admin --name "WAC_System_Control" main.py
+        pyinstaller --onefile --uac-admin --console --name "WAC_System_Control" main.py
 
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v1
